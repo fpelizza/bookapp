@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  frontend:    
+    image: frontend
+    ports:
+      - 3000:5173
+    depends_on:
+      - backend
+  backend:
+    image: backend
+    ports:
+      - 8080:8080
+    environment:
+      DATABASE_URL: "mongodb+srv://fpelizza:fitito1976@userwebapi.il0rzuy.mongodb.net/"
+      ACCESS_TOKEN_SECRET: 'randompassword'
+      PORT: 8080
+

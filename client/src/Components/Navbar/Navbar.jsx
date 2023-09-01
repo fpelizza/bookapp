@@ -26,7 +26,7 @@ const Navbar = () => {
                     <li className="nav-item">
                         <Link to = "/book" className="nav-link text-uppercase text-white fw-6 fs-22 ls-1">Home</Link>
                         <Link to = "/about" className="nav-link text-uppercase text-white fw-6 fs-22 ls-1">About</Link>
-
+                        <Link to = "/favourites" className="nav-link text-uppercase text-white fw-6 fs-22 ls-1">Favourites</Link>
                     </li>
                 </ul>
             </div>

@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom'
 import './Booklist.css'
+import { useGlobalContext } from '../../context'
 
 const Book = (book) => {
+
+    const {addFavourite} = useGlobalContext()
+
   return (
     <div className='book-item flex flex-column flex-sb'>
         <div className='book-item-img'>
@@ -25,6 +29,9 @@ const Book = (book) => {
                 <span className='text-capitalize fw-7'>Year: </span>
                 <span>{book.first_publish_year}</span>
             </div>
+            <button onClick={()=>addFavourite(book)}>
+                add
+            </button>
         </div>
     </div>
   )
